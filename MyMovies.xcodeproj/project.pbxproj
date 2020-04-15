@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98613D0724468ED600D6D0F6 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */; };
 		9896D43724450A9B005D109E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9896D43624450A9B005D109E /* Movie.swift */; };
 		9896D43824450A9B005D109E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9896D43624450A9B005D109E /* Movie.swift */; };
 		9896D43924450A9B005D109E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9896D43624450A9B005D109E /* Movie.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		9896D43624450A9B005D109E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9896D43A24450FC1005D109E /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		98B449C7244262D100A880C1 /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				98B449CC244262D100A880C1 /* SceneDelegate.swift */,
 				98B449CE244262D100A880C1 /* ViewController.swift */,
 				98B449D0244262D100A880C1 /* Main.storyboard */,
+				98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */,
 				98B449D6244262D400A880C1 /* Assets.xcassets */,
 				98B449D8244262D400A880C1 /* LaunchScreen.storyboard */,
 				98B449DB244262D400A880C1 /* Info.plist */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98613D0724468ED600D6D0F6 /* MoviesTableViewController.swift in Sources */,
 				98B449CF244262D100A880C1 /* ViewController.swift in Sources */,
 				98B449CB244262D100A880C1 /* AppDelegate.swift in Sources */,
 				98B449D5244262D100A880C1 /* MyMovies.xcdatamodeld in Sources */,
