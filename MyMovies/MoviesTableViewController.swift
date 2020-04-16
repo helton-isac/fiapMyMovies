@@ -23,6 +23,14 @@ class MoviesTableViewController: UITableViewController {
         loadMovies()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ViewController {
+            let movie = movies[tableView.indexPathForSelectedRow!.row]
+            
+            vc.movie = movie
+        }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
