@@ -19,9 +19,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var lbRating: UILabel!
     @IBOutlet weak var tvSummary: UITextView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)
         
         if let movie = movie {
             ivMovie.image = movie.image as? UIImage
@@ -33,7 +35,10 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? AddEditViewController {
+            vc.movie = movie
+        }
+    }
 }
 

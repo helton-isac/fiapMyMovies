@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Edit View Controller-->
         <scene sceneID="Kmn-ib-LAO">
             <objects>
-                <viewController id="LHq-7L-pRY" sceneMemberID="viewController">
+                <viewController id="LHq-7L-pRY" customClass="AddEditViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IY-eu-1J0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,6 +93,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addEditMovie:" destination="LHq-7L-pRY" eventType="touchUpInside" id="e8a-sp-PAE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,10 +129,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c3B-Ip-4BE"/>
                     </view>
+                    <navigationItem key="navigationItem" id="iRI-fh-bjD"/>
+                    <connections>
+                        <outlet property="btAddEdit" destination="WLi-xa-xF4" id="6eq-1Z-PJl"/>
+                        <outlet property="ivMovie" destination="cx9-OM-nRp" id="6mI-RT-EZQ"/>
+                        <outlet property="tfCategories" destination="qyn-8D-PDf" id="aaK-WY-kpN"/>
+                        <outlet property="tfDuration" destination="Fbp-Zv-nyK" id="ZSm-gr-smX"/>
+                        <outlet property="tfRating" destination="1mY-za-Txd" id="dkV-3v-OsM"/>
+                        <outlet property="tfTitle" destination="4gp-hu-6L9" id="bLN-pk-0D8"/>
+                        <outlet property="tvSummary" destination="rE1-so-Fm7" id="hVR-3h-eqv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I6-TD-TaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="-558"/>
+            <point key="canvasLocation" x="950" y="-547"/>
         </scene>
         <!--Movies Table View Controller-->
         <scene sceneID="N1w-Ex-rOH">
@@ -302,7 +315,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="amt-ZM-8ye"/>
+                    <navigationItem key="navigationItem" id="amt-ZM-8ye">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="MsZ-iy-dIP">
+                            <connections>
+                                <segue destination="LHq-7L-pRY" kind="show" id="ofS-fm-cRf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ivMovie" destination="Luw-lW-FF0" id="WbL-gg-p5J"/>
                         <outlet property="lbCategories" destination="gC9-t2-dja" id="DYk-q0-0RH"/>
@@ -335,6 +354,9 @@
             <point key="canvasLocation" x="-574" y="128"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ofS-fm-cRf"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="avengers" width="400" height="330"/>
         <image name="play" width="53" height="53"/>

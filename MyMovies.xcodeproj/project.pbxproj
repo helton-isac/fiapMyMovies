@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980A7DEA244D11C200E27BBD /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A7DE9244D11C200E27BBD /* AddEditViewController.swift */; };
 		98613D0724468ED600D6D0F6 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */; };
 		98613D09244698E100D6D0F6 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98613D08244698E100D6D0F6 /* MovieTableViewCell.swift */; };
 		9896D43B24450FC1005D109E /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 9896D43A24450FC1005D109E /* movies.json */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		980A7DE9244D11C200E27BBD /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		98613D08244698E100D6D0F6 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		9896D43A24450FC1005D109E /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		98B449C9244262D100A880C1 /* MyMovies */ = {
 			isa = PBXGroup;
 			children = (
+				980A7DE9244D11C200E27BBD /* AddEditViewController.swift */,
 				98B449CA244262D100A880C1 /* AppDelegate.swift */,
 				98D5ECD52447E61F00A66DE1 /* UIViewController+CoreData.swift */,
 				9896D43A24450FC1005D109E /* movies.json */,
@@ -283,6 +286,7 @@
 				98B449CF244262D100A880C1 /* ViewController.swift in Sources */,
 				98613D09244698E100D6D0F6 /* MovieTableViewCell.swift in Sources */,
 				98B449CB244262D100A880C1 /* AppDelegate.swift in Sources */,
+				980A7DEA244D11C200E27BBD /* AddEditViewController.swift in Sources */,
 				98D5ECD62447E61F00A66DE1 /* UIViewController+CoreData.swift in Sources */,
 				98B449D5244262D100A880C1 /* MyMovies.xcdatamodeld in Sources */,
 				98B449CD244262D100A880C1 /* SceneDelegate.swift in Sources */,
