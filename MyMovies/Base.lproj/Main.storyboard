@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H0f-qJ-pNH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dLr-Er-fxi">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4I6-TD-TaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="950" y="-547"/>
+            <point key="canvasLocation" x="2463.1999999999998" y="126.38680659670166"/>
         </scene>
         <!--Movies Table View Controller-->
         <scene sceneID="N1w-Ex-rOH">
@@ -220,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7hT-ql-lQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202.89855072463769" y="127.90178571428571"/>
+            <point key="canvasLocation" x="1295.2" y="-359.37031484257875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -333,12 +333,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="128"/>
+            <point key="canvasLocation" x="2463.1999999999998" y="-788.45577211394311"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Filmes-->
         <scene sceneID="Y8N-zc-Aos">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H0f-qJ-pNH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Filmes" image="movies" id="3Of-4x-jdI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rgQ-W1-gmc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -351,14 +352,84 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfP-Yi-9CE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-574" y="128"/>
+            <point key="canvasLocation" x="239.19999999999999" y="-359.37031484257875"/>
+        </scene>
+        <!--Ajustes-->
+        <scene sceneID="aaD-ic-c7i">
+            <objects>
+                <viewController id="GFn-Jv-D71" customClass="SettingsViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zqP-1f-QQs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k74-Pa-mg3">
+                                <rect key="frame" x="0.0" y="40" width="375" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rodar vídeos automaticamente?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5U-D4-FAi">
+                                <rect key="frame" x="8" y="84" width="220" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0g-2f-mwV">
+                                <rect key="frame" x="310" y="78" width="51" height="31"/>
+                                <connections>
+                                    <action selector="changePlay:" destination="78n-wn-2Ey" eventType="valueChanged" id="7Jx-Yb-GPG"/>
+                                    <action selector="changePlay:" destination="GFn-Jv-D71" eventType="valueChanged" id="aWN-hz-mMe"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k74-Pa-mg3" firstAttribute="top" secondItem="Yql-3M-zoy" secondAttribute="top" constant="40" id="A5b-DK-Vdg"/>
+                            <constraint firstItem="B5U-D4-FAi" firstAttribute="leading" secondItem="Yql-3M-zoy" secondAttribute="leading" constant="8" id="JZf-JE-8d5"/>
+                            <constraint firstItem="H0g-2f-mwV" firstAttribute="top" secondItem="k74-Pa-mg3" secondAttribute="bottom" constant="10" id="TdQ-hz-Avj"/>
+                            <constraint firstItem="Yql-3M-zoy" firstAttribute="trailing" secondItem="k74-Pa-mg3" secondAttribute="trailing" id="XVK-vq-Pww"/>
+                            <constraint firstItem="Yql-3M-zoy" firstAttribute="trailing" secondItem="H0g-2f-mwV" secondAttribute="trailing" constant="16" id="cbM-QY-gNX"/>
+                            <constraint firstItem="k74-Pa-mg3" firstAttribute="leading" secondItem="Yql-3M-zoy" secondAttribute="leading" id="hgL-Yu-39T"/>
+                            <constraint firstItem="B5U-D4-FAi" firstAttribute="top" secondItem="k74-Pa-mg3" secondAttribute="bottom" constant="16" id="vYd-Qf-0wH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yql-3M-zoy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="settings" id="ghe-Ee-aOe"/>
+                    <connections>
+                        <outlet property="swPlay" destination="H0g-2f-mwV" id="ctB-V6-yrg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u5n-Qi-BMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="78n-wn-2Ey" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="463"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="L0p-Y6-ERQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dLr-Er-fxi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="61V-a1-yla">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="H0f-qJ-pNH" kind="relationship" relationship="viewControllers" id="hwy-SP-U9U"/>
+                        <segue destination="GFn-Jv-D71" kind="relationship" relationship="viewControllers" id="myA-9E-aoC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEk-6w-zS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="22"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ofS-fm-cRf"/>
+        <segue reference="ZcU-vC-j8q"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avengers" width="400" height="330"/>
+        <image name="movies" width="22" height="22"/>
         <image name="play" width="53" height="53"/>
+        <image name="settings" width="22" height="22"/>
     </resources>
 </document>
