@@ -292,10 +292,20 @@
                                     <constraint firstItem="xIH-r1-Pa8" firstAttribute="leading" secondItem="WY8-9u-XgI" secondAttribute="leading" constant="16" id="yc9-kQ-hbr"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auu-T9-u2v">
+                                <rect key="frame" x="232" y="333" width="127" height="30"/>
+                                <state key="normal" title="Agendar Lembrete">
+                                    <color key="titleColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dIa-ye-F03"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WY8-9u-XgI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1AE-zT-ZY7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Auu-T9-u2v" secondAttribute="trailing" constant="16" id="3Oo-tB-Y79"/>
                             <constraint firstItem="WY8-9u-XgI" firstAttribute="top" secondItem="BXm-y8-vJ1" secondAttribute="bottom" constant="12" id="6M7-Gh-kOd"/>
                             <constraint firstItem="gC9-t2-dja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7GV-mU-LvK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Luw-lW-FF0" secondAttribute="trailing" id="9GG-1V-zW4"/>
@@ -305,6 +315,7 @@
                             <constraint firstItem="efK-gz-agI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GMH-QN-sv0"/>
                             <constraint firstAttribute="bottom" secondItem="WY8-9u-XgI" secondAttribute="bottom" id="IOU-HA-Rub"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WY8-9u-XgI" secondAttribute="trailing" id="Igf-OH-f9y"/>
+                            <constraint firstItem="Auu-T9-u2v" firstAttribute="top" secondItem="Uci-Ec-zFe" secondAttribute="bottom" id="OeS-vA-7fg"/>
                             <constraint firstItem="juK-g0-iw0" firstAttribute="centerY" secondItem="Luw-lW-FF0" secondAttribute="centerY" id="Sxb-Ug-vBL"/>
                             <constraint firstItem="Luw-lW-FF0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V5M-i4-m8G"/>
                             <constraint firstItem="efK-gz-agI" firstAttribute="top" secondItem="Luw-lW-FF0" secondAttribute="bottom" constant="4" id="hnf-Of-Uyv"/>
@@ -424,7 +435,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZcU-vC-j8q"/>
+        <segue reference="ofS-fm-cRf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avengers" width="400" height="330"/>
