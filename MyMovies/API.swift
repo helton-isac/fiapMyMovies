@@ -18,7 +18,7 @@ struct Trailer: Codable {
 
 class API {
     
-    static let basePath = "https://itunes.apple.com/search?media=movie&amp;entity=movie&amp;term="
+    static let basePath = "https://itunes.apple.com/search?media=movie&entity=movie&term="
     
     static let configuration: URLSessionConfiguration = {
         
