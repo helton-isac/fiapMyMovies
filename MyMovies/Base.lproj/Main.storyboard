@@ -83,6 +83,9 @@
                                 <state key="normal" title="Adicionar Pôster">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPoster:" destination="LHq-7L-pRY" eventType="touchUpInside" id="oNx-ue-hck"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLi-xa-xF4">
                                 <rect key="frame" x="16" y="348" width="343" height="38"/>
@@ -421,6 +424,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dLr-Er-fxi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="61V-a1-yla">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
