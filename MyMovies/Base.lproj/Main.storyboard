@@ -418,6 +418,21 @@
             </objects>
             <point key="canvasLocation" x="239" y="463"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ito-fK-oMO">
+            <objects>
+                <viewController id="l3J-ST-gX3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pI9-VF-RMm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="VmD-tZ-9yZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABI-h9-Hfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1258" y="468"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L0p-Y6-ERQ">
             <objects>
@@ -430,12 +445,53 @@
                     </tabBar>
                     <connections>
                         <segue destination="H0f-qJ-pNH" kind="relationship" relationship="viewControllers" id="hwy-SP-U9U"/>
+                        <segue destination="fSd-ub-AuU" kind="relationship" relationship="viewControllers" id="ey0-9h-0M7"/>
                         <segue destination="GFn-Jv-D71" kind="relationship" relationship="viewControllers" id="myA-9E-aoC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEk-6w-zS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1054" y="22"/>
+            <point key="canvasLocation" x="-836" y="450"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="j7M-NU-j7G">
+            <objects>
+                <viewController id="fSd-ub-AuU" customClass="MapViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="neo-Jp-Ulm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UdV-2P-ARu">
+                                <rect key="frame" x="0.0" y="56" width="375" height="562"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" placeholder="Entre com o ponto de interesse" translatesAutoresizingMaskIntoConstraints="NO" id="2il-dt-hfB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2il-dt-hfB" firstAttribute="leading" secondItem="NNh-kK-2tf" secondAttribute="leading" id="0gL-NQ-Gwj"/>
+                            <constraint firstItem="UdV-2P-ARu" firstAttribute="leading" secondItem="NNh-kK-2tf" secondAttribute="leading" id="9ge-i5-gO6"/>
+                            <constraint firstItem="2il-dt-hfB" firstAttribute="top" secondItem="NNh-kK-2tf" secondAttribute="top" id="NHW-er-CtI"/>
+                            <constraint firstItem="NNh-kK-2tf" firstAttribute="bottom" secondItem="UdV-2P-ARu" secondAttribute="bottom" id="Q1d-fs-1Fc"/>
+                            <constraint firstItem="2il-dt-hfB" firstAttribute="trailing" secondItem="NNh-kK-2tf" secondAttribute="trailing" id="WSd-09-5uM"/>
+                            <constraint firstItem="UdV-2P-ARu" firstAttribute="top" secondItem="2il-dt-hfB" secondAttribute="bottom" id="dum-Yv-2gr"/>
+                            <constraint firstItem="NNh-kK-2tf" firstAttribute="trailing" secondItem="UdV-2P-ARu" secondAttribute="trailing" id="juF-AE-7R8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NNh-kK-2tf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="map" id="qnn-Q4-NEH"/>
+                    <navigationItem key="navigationItem" id="nkH-n3-ScZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="UdV-2P-ARu" id="HpN-aV-ssm"/>
+                        <outlet property="searchBar" destination="2il-dt-hfB" id="2ay-e9-ops"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XU1-js-MLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="1219"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -443,6 +499,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avengers" width="400" height="330"/>
+        <image name="map" width="22" height="22"/>
         <image name="movies" width="22" height="22"/>
         <image name="play" width="53" height="53"/>
         <image name="settings" width="22" height="22"/>

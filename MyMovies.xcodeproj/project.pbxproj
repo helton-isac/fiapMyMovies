@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		980A7DEA244D11C200E27BBD /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A7DE9244D11C200E27BBD /* AddEditViewController.swift */; };
+		981B3C81246CD40C00ADB130 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981B3C80246CD40C00ADB130 /* MapViewController.swift */; };
 		982D9F10244F618D0028113E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D9F0F244F618D0028113E /* SettingsViewController.swift */; };
 		982D9F12244FA8D70028113E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D9F11244FA8D70028113E /* API.swift */; };
 		98613D0724468ED600D6D0F6 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		980A7DE9244D11C200E27BBD /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
+		981B3C80246CD40C00ADB130 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		982D9F0F244F618D0028113E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		982D9F11244FA8D70028113E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				98B449DB244262D400A880C1 /* Info.plist */,
 				98B449D3244262D100A880C1 /* MyMovies.xcdatamodeld */,
 				982D9F11244FA8D70028113E /* API.swift */,
+				981B3C80246CD40C00ADB130 /* MapViewController.swift */,
 			);
 			path = MyMovies;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981B3C81246CD40C00ADB130 /* MapViewController.swift in Sources */,
 				98613D0724468ED600D6D0F6 /* MoviesTableViewController.swift in Sources */,
 				98B449CF244262D100A880C1 /* ViewController.swift in Sources */,
 				98613D09244698E100D6D0F6 /* MovieTableViewCell.swift in Sources */,
