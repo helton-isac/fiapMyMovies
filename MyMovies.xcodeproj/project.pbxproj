@@ -119,22 +119,22 @@
 		98B449C9244262D100A880C1 /* MyMovies */ = {
 			isa = PBXGroup;
 			children = (
-				982D9F0F244F618D0028113E /* SettingsViewController.swift */,
-				980A7DE9244D11C200E27BBD /* AddEditViewController.swift */,
-				98B449CA244262D100A880C1 /* AppDelegate.swift */,
-				98D5ECD52447E61F00A66DE1 /* UIViewController+CoreData.swift */,
-				9896D43A24450FC1005D109E /* movies.json */,
-				98B449CC244262D100A880C1 /* SceneDelegate.swift */,
-				98B449CE244262D100A880C1 /* ViewController.swift */,
-				98B449D0244262D100A880C1 /* Main.storyboard */,
-				98613D08244698E100D6D0F6 /* MovieTableViewCell.swift */,
-				98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */,
-				98B449D6244262D400A880C1 /* Assets.xcassets */,
-				98B449D8244262D400A880C1 /* LaunchScreen.storyboard */,
 				98B449DB244262D400A880C1 /* Info.plist */,
+				98B449D0244262D100A880C1 /* Main.storyboard */,
+				98B449D8244262D400A880C1 /* LaunchScreen.storyboard */,
 				98B449D3244262D100A880C1 /* MyMovies.xcdatamodeld */,
+				9896D43A24450FC1005D109E /* movies.json */,
 				982D9F11244FA8D70028113E /* API.swift */,
+				98B449CA244262D100A880C1 /* AppDelegate.swift */,
+				98B449CC244262D100A880C1 /* SceneDelegate.swift */,
+				98613D08244698E100D6D0F6 /* MovieTableViewCell.swift */,
+				98D5ECD52447E61F00A66DE1 /* UIViewController+CoreData.swift */,
+				98613D0624468ED600D6D0F6 /* MoviesTableViewController.swift */,
+				980A7DE9244D11C200E27BBD /* AddEditViewController.swift */,
+				98B449CE244262D100A880C1 /* ViewController.swift */,
+				982D9F0F244F618D0028113E /* SettingsViewController.swift */,
 				981B3C80246CD40C00ADB130 /* MapViewController.swift */,
+				98B449D6244262D400A880C1 /* Assets.xcassets */,
 			);
 			path = MyMovies;
 			sourceTree = "<group>";
