@@ -8,6 +8,7 @@
 
 import UIKit
 import UserNotifications
+import AVKit
 
 class ViewController: UIViewController {
     
@@ -15,12 +16,16 @@ class ViewController: UIViewController {
     
     var trailer = ""
     
+    var moviePlayer: AVPlayer?
+    var moviePlayerController: AVPlayerViewController?
+    
     @IBOutlet weak var ivMovie: UIImageView!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbCategories: UILabel!
     @IBOutlet weak var lbDuration: UILabel!
     @IBOutlet weak var lbRating: UILabel!
     @IBOutlet weak var tvSummary: UITextView!
+    @IBOutlet weak var btnPlay: UIButton!
     
     var datePicker = UIDatePicker()
     
@@ -47,6 +52,13 @@ class ViewController: UIViewController {
         alert.textFields?.first?.text = dateformatter.string(from: datePicker.date)
     }
     
+    @IBAction func play(_ sender: Any) {
+        guard let moviePlayerController = moviePlayerController else {return}
+        present(moviePlayerController, animated: true) {
+            self.moviePlayer?.play()
+        }
+    }
+    
     func loadTrailers(title: String) {
         
         API.loadTrailers(title: title) { (apiResult) in
@@ -59,7 +71,7 @@ class ViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.trailer = trailer.previewUrl
-                print("URL do Trailer:", trailer.previewUrl)
+                self.prepareVideo()
             }
         }
     }
@@ -98,7 +110,7 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-
+    
     func schedule() {
         let content = UNMutableNotificationContent()
         let movieTitle = movie?.title ?? ""
@@ -117,5 +129,13 @@ class ViewController: UIViewController {
         if let vc = segue.destination as? AddEditViewController {
             vc.movie = movie
         }
+    }
+    
+    func prepareVideo() {
+        guard let url = URL(string: trailer) else {return}
+        moviePlayer = AVPlayer(url: url)
+        moviePlayerController = AVPlayerViewController()
+        moviePlayerController?.player = moviePlayer
+        moviePlayerController?.showsPlaybackControls = true
     }
 }

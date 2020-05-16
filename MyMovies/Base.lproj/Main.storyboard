@@ -242,6 +242,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juK-g0-iw0">
                                 <rect key="frame" x="161" y="132.5" width="53" height="53"/>
                                 <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqi-be-a87"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do Filme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efK-gz-agI">
                                 <rect key="frame" x="16" y="278" width="182" height="34"/>
@@ -337,6 +340,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnPlay" destination="juK-g0-iw0" id="Eau-DV-Yij"/>
                         <outlet property="ivMovie" destination="Luw-lW-FF0" id="WbL-gg-p5J"/>
                         <outlet property="lbCategories" destination="gC9-t2-dja" id="DYk-q0-0RH"/>
                         <outlet property="lbDuration" destination="Uci-Ec-zFe" id="KYd-mi-amb"/>
@@ -525,7 +529,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZcU-vC-j8q"/>
+        <segue reference="ofS-fm-cRf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="avengers" width="400" height="330"/>
