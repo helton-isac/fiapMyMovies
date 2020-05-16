@@ -29,7 +29,7 @@ class AddEditViewController: UIViewController {
             tfTitle.text = movie.title
             tfCategories.text = movie.categories
             tfDuration.text = movie.duration
-            tfRating.text = "⭐️ \(movie.rating)/10"
+            tfRating.text = "\(movie.rating)"
             tvSummary.text = movie.summary
             btAddEdit.setTitle("Alterar", for: .normal)
         }
