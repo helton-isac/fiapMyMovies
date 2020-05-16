@@ -2,7 +2,7 @@
 
 Project Structure:
 
-<img src="./demo/ProjectStructure.png" width="50%">
+<img src="./demo/ProjectStructure.png" height="300px">
 
 StoryBoard:
 
@@ -10,20 +10,20 @@ StoryBoard:
 
 AppDemo:
 
-<img src="./demo/MovieList.gif" width="49%"> <img src="./demo/TabBar.gif" width="49%"> 
+<img src="./demo/MovieList.gif" height="300px"> <img src="./demo/TabBar.gif" height="300px"> 
 
 Creating and editing Item:
 
-<img src="./demo/Creating Item.gif" width="49%"> <img src="./demo/Editing Item.gif" width="49%">
+<img src="./demo/Creating Item.gif" height="300px"> <img src="./demo/Editing Item.gif" height="300px">
 
 Trailer:
 
-<img src="./demo/Trailer.gif" width="49%">
+<img src="./demo/Trailer.gif" height="300px">
 
 Map:
 
-<img src="./demo/Route.gif" width="49%">
+<img src="./demo/Route.gif" height="300px">
 
 WebView:
 
-<img src="./demo/WebView.gif" width="49%">
+<img src="./demo/WebView.gif" height="300px">
