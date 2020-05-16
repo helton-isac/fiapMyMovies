@@ -83,6 +83,7 @@ extension MapViewController: MKMapViewDelegate {
             let urlAction = UIAlertAction(title: "Acessar site", style: .default) {
                 (action)
                 in
+                self.performSegue(withIdentifier: "webSegue", sender: url)
             }
             
             alert.addAction(urlAction)
@@ -97,6 +98,12 @@ extension MapViewController: MKMapViewDelegate {
         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? SiteViewController, let sender = sender as? String {
+            vc.site = sender
+        }
     }
     
     func showRoute(to destination: CLLocationCoordinate2D) {
@@ -124,7 +131,7 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
-
+            
             let renderer = MKPolylineRenderer(overlay: overlay)
             
             renderer.lineWidth = 8.0

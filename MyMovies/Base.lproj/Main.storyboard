@@ -418,20 +418,49 @@
             </objects>
             <point key="canvasLocation" x="239" y="463"/>
         </scene>
-        <!--View Controller-->
+        <!--Site View Controller-->
         <scene sceneID="ito-fK-oMO">
             <objects>
-                <viewController id="l3J-ST-gX3" sceneMemberID="viewController">
+                <viewController id="l3J-ST-gX3" customClass="SiteViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pI9-VF-RMm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeW-8j-bJQ">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="44l-mv-Gpe"/>
+                                    <constraint firstAttribute="height" constant="30" id="s8p-UM-P3z"/>
+                                </constraints>
+                                <state key="normal" title="Fechar"/>
+                                <connections>
+                                    <action selector="close:" destination="l3J-ST-gX3" eventType="touchUpInside" id="VDp-gv-5MH"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-IA-tyt">
+                                <rect key="frame" x="0.0" y="58" width="375" height="589"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ixL-IA-tyt" firstAttribute="bottom" secondItem="VmD-tZ-9yZ" secondAttribute="bottom" id="83c-ch-k2t"/>
+                            <constraint firstItem="ixL-IA-tyt" firstAttribute="trailing" secondItem="VmD-tZ-9yZ" secondAttribute="trailing" id="Ddp-9c-QNl"/>
+                            <constraint firstItem="ixL-IA-tyt" firstAttribute="top" secondItem="xeW-8j-bJQ" secondAttribute="bottom" constant="8" id="UIt-ai-D8s"/>
+                            <constraint firstItem="ixL-IA-tyt" firstAttribute="leading" secondItem="VmD-tZ-9yZ" secondAttribute="leading" id="nxl-6E-xrx"/>
+                            <constraint firstItem="xeW-8j-bJQ" firstAttribute="top" secondItem="VmD-tZ-9yZ" secondAttribute="top" constant="20" id="p3g-SS-K1V"/>
+                            <constraint firstItem="xeW-8j-bJQ" firstAttribute="leading" secondItem="VmD-tZ-9yZ" secondAttribute="leading" constant="16" id="tRy-l8-fPR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VmD-tZ-9yZ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cP0-rf-csQ"/>
+                    <connections>
+                        <outlet property="webView" destination="ixL-IA-tyt" id="i8r-bp-rzL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABI-h9-Hfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="468"/>
+            <point key="canvasLocation" x="1038" y="1218"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L0p-Y6-ERQ">
@@ -487,6 +516,7 @@
                     <connections>
                         <outlet property="mapView" destination="UdV-2P-ARu" id="HpN-aV-ssm"/>
                         <outlet property="searchBar" destination="2il-dt-hfB" id="2ay-e9-ops"/>
+                        <segue destination="l3J-ST-gX3" kind="show" identifier="webSegue" id="mKR-Ue-mAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU1-js-MLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
